@@ -15,4 +15,3 @@ cache_forge
 .DS_Store
 .pnp.*
 lcov.info
-pnpm-lock.yaml
