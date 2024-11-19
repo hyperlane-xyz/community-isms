@@ -2,18 +2,19 @@
 pragma solidity ^0.8.13;
 
 import { Test } from "forge-std/Test.sol";
+import { IInterchainSecurityModule } from "@hyperlane-xyz/contracts/interfaces/IInterchainSecurityModule.sol";
+
 import { ExampleIsm } from "../src/ExampleIsm.sol";
 
 contract ExampleIsmTest is Test {
     ExampleIsm public exampleIsm;
-    uint8 public constant EXAMPLE_ISM_TYPE = 128;
 
     function setUp() public {
         exampleIsm = new ExampleIsm();
     }
 
     function test_moduleType() public view {
-        assertEq(exampleIsm.moduleType(), EXAMPLE_ISM_TYPE);
+        assertEq(exampleIsm.moduleType(), uint8(IInterchainSecurityModule.Types.CCIP_READ));
     }
 
     // TODO: Implement the test for the verify function
