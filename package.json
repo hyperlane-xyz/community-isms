@@ -1,11 +1,13 @@
 {
-  "name": "@ethsign/",
+  "name": "@hyperlane-xyz/community",
   "version": "1.0.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EthSign"
-  },
+  "description": "A repository for community-contributions to Hyperlane protocol.",
+  "repository": "https://github.com/hyperlane-xyz/community-isms",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Hyperlane",
+    "Solidity"
+  ],
   "scripts": {
     "prepare": "husky",
     "clean": "forge clean && hardhat clean && rm -rf cache_hardhat",
@@ -18,9 +20,8 @@
     "test:coverage": "forge coverage",
     "test:gas": "forge test --gas-report"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@hyperlane-xyz/core": "^5.8.0",
     "@openzeppelin/contracts": "5.0.2",
     "@openzeppelin/contracts-upgradeable": "5.0.2"
   },
